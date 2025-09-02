@@ -1,0 +1,37 @@
+
+:root{
+  --bg:#0b0d10; --fg:#e6edf3; --muted:#9fb0c3; --accent:#8fd3ff; --accent2:#b7ffa1;
+  --card:#11151a; --border:#202733; --link:#9ddcff;
+  --pad: clamp(12px, 2vw, 24px);
+  --radius:16px;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --serif: "Georgia", "Garamond", "Times New Roman", serif;
+  --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+*{box-sizing:border-box}
+html,body{background:var(--bg);color:var(--fg);margin:0;padding:0;font-family:var(--sans);}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:var(--pad)}
+header{position:sticky;top:0;background:rgba(11,13,16,0.85);backdrop-filter: blur(6px);border-bottom:1px solid var(--border);z-index:10}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:20px}
+nav{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+nav a{padding:8px 12px;border:1px solid var(--border);border-radius:999px}
+main{padding:var(--pad)}
+.hero{display:grid;gap:18px;padding:calc(var(--pad)*2);background:linear-gradient(180deg, rgba(143,211,255,0.12), transparent 40%), var(--card);border:1px solid var(--border);border-radius:var(--radius)}
+.hero h1{font-size:clamp(28px,4vw,44px);margin:0}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+.card h3{margin-top:0}
+small, .muted{color:var(--muted)}
+footer{border-top:1px solid var(--border);margin-top:40px}
+blockquote{border-left:3px solid var(--accent);padding:8px 12px;margin:12px 0;background:rgba(143,211,255,0.08);border-radius:8px}
+hr{border:0;border-top:1px solid var(--border);margin:24px 0}
+pre{background:#0a0f14;border:1px solid var(--border);padding:12px;border-radius:10px;overflow:auto}
+code{font-family:var(--mono)}
+.kicker{letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-size:12px}
+.badge{display:inline-block;padding:4px 8px;border:1px solid var(--border);border-radius:999px;background:#0c1218}
+.notice{border:1px dashed var(--border);padding:12px;border-radius:12px;background:#0f1319}
+ul.check{list-style:none;padding-left:0}
+ul.check li{padding-left:24px;position:relative;margin:8px 0}
+ul.check li::before{content:"✓";position:absolute;left:0;color:var(--accent2)}
